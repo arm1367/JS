@@ -6,46 +6,39 @@
   <title>CSS Toggle</title>
   <style>
     body {
-      margin : 0;
+      margin: 0;
     }
+
     .btn {
       padding: .5em 1em;
     }
+
     .fancy-bg {
-      background: #193154
+      background: #193154;
     }
   </style>
 </head>
-<body id="body" class="one two three four">
-  
-  <button>Hamburger Menu</button>
+<body class="one two three four">
+  <button class="btn">Hamburger Menu</button>
+  <p id="paragraph">This is a paragraph</p>
+  <script>
+    // Declare variables like this instead of adding an id attribute
+    const body = document.querySelector('body');
+    const button = document.querySelector('.btn');
 
-  <!-- //<h1>Hello World!!</h1>// -->
+    // Function to toggle a class name
+    function toggleBackground() {
+      console.log('clicked');
+      body.classList.toggle('fancy-bg');
+    }
 
-<script> 
- const age = 47;
- const name =  "Alejandro"
- //
- const body = document.querySelector('body');
- const button = document.querySelector('.btn');
- console.log(body.classList.add('fancy-bg'));
-  // console.log(`${name} is ${age} years old.`)
-//console.warn('warning here');
+    // Add event listener to `button`
+    button.addEventListener("click", toggleBackground);
 
+    // console.log(`${name} is ${age} years old.`);
+    // console.error('error here');
+    // console.warn('warning here');
 
-// Function to toggle a class name
-function toggleBackground() {
-  console.log('clicked');
-  body.classList.toggle('fancy-bg');
-}
-
-// Add event listener to `button`
-button.addEventListener("click", toggleBackground);
-
-console.log(body);
-
-</script>
+  </script>
 </body>
-
-
 </html>
